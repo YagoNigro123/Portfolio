@@ -1,0 +1,139 @@
+.contactDivBody {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    overflow-y: auto;
+    height: auto;
+    width: auto;
+    background-color: azure;
+    border-radius: 1em;
+    margin: 2em;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.contactFrom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.contactDivForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacDivFormContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactDivFormUl {
+    display: flex;
+    gap: 1em;
+    list-style: none;
+    margin: 2em;
+}
+
+
+.footerBarLinksIcon {
+    height: 3em;
+    width: 3em;
+}
+
+.contactDivFormImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.input {
+    border-radius: 1em;
+    margin: 0.25em;
+    text-align: center;
+    border: none;
+    padding: 0.5em;
+    border: black solid 1px;
+    width: 35vh;
+}
+
+.textarea {
+    border-radius: 1em;
+    width: 35vh;
+    height: 18vh;
+    resize: none;
+    text-align: center;
+    border: none;
+    border: black solid 1px;
+    padding-top: 1em;
+    margin: 0.25em;
+}
+
+.buttom {
+    border-radius: 1em;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 16vh;
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #A9BCF5;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buttom:hover {
+    background-color: #2E2EFE;
+}
+
+@media (max-width: 745px) {
+    .contactDivBody {
+        padding: 0.3em;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .proyectDivBody {
+        width: 75%;
+        height: 80%;
+    }
+
+    .contactDivFormUl {
+        margin: 0;
+        gap: 0;
+    }
+
+    .contactDivFormImg {
+        margin: 0;
+        padding: 0;
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .input {
+        height: 5vh;
+    }
+
+    .textarea {
+        height: 20vh;
+    }
+
+    .contactFrom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0em;
+    }
+
+    .buttom {
+        margin: 0;
+    }
+}

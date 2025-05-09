@@ -1,0 +1,177 @@
+/* General styles */
+p {
+    width: 40%;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    overflow: hidden;
+}
+
+/* Skills Section */
+
+
+.bodySkills {
+    margin: 1em;
+}
+
+.bodySkillsUl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 1em;
+    background-color: #A9BCF5;
+    border-radius: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.bodySkillsUlLi {
+    padding: 0.5em;
+}
+
+.bodySkillsUlLi:hover {
+    background-color: #c1cffa;
+    border-radius: 1em;
+}
+
+.bodySkillsUlLiIcons {
+    font-size: 3em;
+}
+
+/* .bodySkillsUlLiIcons {} */
+
+/* Typing Animation */
+.name {
+    overflow: hidden;
+    white-space: nowrap;
+    color: #000;
+    width: 0;
+    border-right: 3px solid white;
+    animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
+    line-height: 1.5;
+    font-size: 5em;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: white;
+    }
+}
+
+/* Text Styles */
+.infoStudy,
+.age {
+    color: #fff;
+    font-size: 2em;
+}
+
+/* Button Styles */
+.buttomProyects {
+    padding: 0.75em;
+    background-color: transparent;
+    border-radius: 1em;
+    margin: 1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.buttomProyects:hover {
+    background-color: #A9BCF5;
+}
+
+.linkButtom {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*footer */
+.footerButton {
+    border: .15em solid #fff;
+    padding: 1.5vh 2vh 1.5vh 2vh;
+    font-size: 1.1em;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.footerBarButtonCvLink {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 1110px) {
+    .name {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-right: none;
+        font-size: 8vh;
+        width: auto;
+        animation: none;
+    }
+
+    .infoStudy {
+        font-size: 4vh;
+    }
+
+    .bodySkillsUlLiIcons {
+        width: 5vh;
+        height: 5vh;
+    }
+
+    .bodySkillsBackground {
+        height: 3.5em;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .name {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-right: none;
+        font-size: 6vh;
+    }
+
+    .infoStudy {
+        font-size: 2vh;
+    }
+
+    .bodySkillsUl {
+        margin: 0;
+        padding: 0;
+        padding: 0;
+        gap: 0;
+    }
+
+
+    .age {
+        font-size: 2vh;
+    }
+
+    .bodySkillsUlLiIcons {
+        width: 4vh;
+        height: 4vh;
+    }
+}

@@ -1,0 +1,182 @@
+.h2 {
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+/*Proyectos*/
+.proyectDivBody {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0.25em;
+    overflow-y: auto;
+    width: 80%;
+    height: 100%;
+    margin: 2em auto;
+    border-radius: 1em;
+    background-color: transparent;
+}
+
+.proyectDivElement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vh;
+    height: 65vh;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 1em;
+    background: linear-gradient(to right, #0101DF, #2E2EFE, #5858FA, rgba(129, 159, 247, 0));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.proyectDivElementImg {
+    position: relative;
+    height: auto;
+    width: 95%;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.proyectDivElementImg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+}
+
+.proyectDivElementUl {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    flex-direction: row;
+    margin: 1vh;
+}
+
+.proyectDivElementUlLi {
+    margin: 0.2em;
+    padding: 0.3em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.25em;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.proyectDivElementUlLi:hover {
+    background-color: rgb(146, 146, 146);
+    border-radius: 0.25em;
+    transform: scale(1.25);
+}
+
+.proyectDivElementUlLiIcon {
+    font-size: 2.5em;
+}
+
+.proyectDivElementImgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 1em;
+}
+
+.proyectDivElementImgOverlayContent {
+    color: white;
+    user-select: none;
+    text-align: center;
+    font-size: 0.9em;
+    line-height: 1.5;
+    max-height: 90%;
+    overflow: auto;
+    padding: 1em;
+}
+
+.proyectDivElementImg:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.4) blur(2px);
+}
+
+.proyectDivElementImg:hover .proyectDivElementImgOverlay {
+    opacity: 1;
+}
+
+@media (max-width: 495px) {
+    .h2 {
+        font-size: 1.4em;
+    }
+
+    .proyectDivElement {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .proyectDivElementUl {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+
+}
+
+@media (max-width: 740px) {
+    .proyectDivElement {
+        width: 60vh;
+        height: 50vh;
+    }
+
+    .experienceDivBody {
+        width: 20em;
+    }
+
+    .proyectDivElementUl {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        gap: 0.4em;
+        flex-direction: row;
+        margin: 1vh;
+    }
+
+    .proyectDivElementUlLi {
+        margin: 0;
+    }
+
+    .proyectDivElementUlLiIcon {
+        flex-wrap: wrap;
+        font-size: 1em;
+    }
+
+
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+    border-radius: 1em 1em 1em 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 1em 1em 1em 1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #A9BCF5;
+    border-radius: 1em 1em 1em 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #003d75;
+}

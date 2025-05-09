@@ -1,0 +1,149 @@
+.navBar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    margin: 2em;
+    padding: 0.75em 1.5em;
+    margin-top: 1.75em;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    position: sticky;
+    top: 1em;
+    z-index: 1000;
+}
+
+.navBarUl {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.navBarUlLinkLiButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonNav {
+    color: #fff;
+}
+
+.navBarUlLinkLi {
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 1em;
+    color: white;
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+    padding: 0;
+    position: relative;
+}
+
+.navBarUlLink {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0.6em 1.2em;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.navBarUlLinkLi:hover {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.navBarUlLinkLi.active {
+    outline: 0.15em solid #fff;
+    color: #4f46e5;
+}
+
+
+/* Skills Section */
+/* .bodySkills {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bodySkillsBackground {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #CEF6F5;
+    opacity: 0.4;
+    border-radius: 1em;
+    z-index: 0;
+}
+
+.bodySkillsUl {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0.3em;
+    gap: 1em;
+    border-radius: 1em;
+    z-index: 1;
+}
+
+.bodySkillsUlLi:hover {
+    background-color: #A9BCF5;
+    border-radius: 1em;
+}
+
+.bodySkillsUlLiIcons {
+    width: 3em;
+    height: 3em;
+} */
+
+/*Button*/
+/* .footerButton {
+    border: .15em solid #fff;
+    padding: 2vh;
+    font-size: 1.1em;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+.footerBarButtonCvLink {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+} */
+
+/* Responsive */
+@media (max-width: 510px) {
+    /* .navBar {} */
+
+    .navBarUl {
+        flex-direction: column;
+    }
+
+    .navBarUlMobileMenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBarUlLinkLiPages {
+        display: none;
+    }
+
+    .navBarUlMobileMenuItemLink {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .navBarUlLinkLiButton {
+        width: 4vh;
+        display: block;
+    }
+
+}

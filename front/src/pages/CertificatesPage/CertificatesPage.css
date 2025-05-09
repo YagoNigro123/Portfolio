@@ -1,0 +1,166 @@
+.certificatesContainer {
+    padding: 40px 20px;
+    min-height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificatesTitle {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.body.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.arrowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.arrowContainer:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrowIcon {
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.arrowContainer:hover .arrowIcon {
+    color: #5858FA;
+    transform: scale(1.2);
+}
+
+.certificatesDivElement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+    width: 80%;
+    max-width: 800px;
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 1em;
+    background: linear-gradient(to right, #0101DF, #2E2EFE, #5858FA, rgba(129, 159, 247, 0));
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+
+.certificatesDivElement:hover {
+    transform: translateY(-5px);
+}
+
+.certificatesDivElementImg {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.certificatesDivElementImg img {
+    width: 100%;
+    height: 31vh;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    border-radius: 1em;
+}
+
+.certificateInfo {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.certificatesPagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.paginationDot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.paginationDot.active {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+.paginationDot:hover {
+    background-color: #fff;
+}
+
+.certificatesDivElementImg img {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .body.flex {
+        flex-direction: column;
+    }
+
+    .arrowContainer {
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .certificatesDivElement {
+        width: 95%;
+    }
+
+    .certificatesTitle {
+        font-size: 1.5rem;
+    }
+
+    .arrowIcon {
+        font-size: 1.5em;
+    }
+
+    /* Versión móvil */
+    .body.flex {
+        flex-direction: row;
+    }
+
+    .certificatesDivElement {
+        flex: 1;
+    }
+}

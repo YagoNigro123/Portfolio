@@ -1,0 +1,47 @@
+<div class="container mt-4">
+    <h1>Editar Proyecto</h1>
+    
+    {{#if error_msg}}
+    <div class="alert alert-danger">
+        {{error_msg}}
+    </div>
+    {{/if}}
+    
+    <form action="/project/update/{{project.id}}" method="POST">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título del Proyecto</label>
+            <input type="text" class="form-control" id="title" name="title" 
+                   value="{{project.title}}" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea class="form-control" id="description" name="description" 
+                      rows="3" required>{{project.description}}</textarea>
+        </div>
+        
+        <div class="mb-3">
+            <label for="lenguajes" class="form-label">Lenguajes Utilizados</label>
+            <input type="text" class="form-control" id="lenguages" name="lenguages" 
+                   value="{{project.lenguages}}">
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-label">URL de Imagen</label>
+            <input type="text" class="form-control" id="image" name="image" 
+                   value="{{project.image}}">
+            
+            {{#if project.image}}
+            <div class="mt-2">
+                <p>Imagen actual:</p>
+                <img src="{{project.image}}" alt="{{project.title}}" style="max-width: 300px; max-height: 200px;">
+            </div>
+            {{/if}}
+        </div>
+        
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Actualizar Proyecto</button>
+            <a href="/project" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

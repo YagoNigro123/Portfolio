@@ -1,0 +1,60 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100vh;
+    text-align: center;
+    overflow: auto;
+
+}
+
+body {
+    font-family: 'Lugrasimo', cursive, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* O si quieres aplicarla a todos los elementos */
+* {
+    font-family: 'Lugrasimo', cursive, sans-serif;
+}
+
+.bodyBackground {
+    background: linear-gradient(270deg, #0101DF, #2E2EFE, #5858FA, #819FF7);
+    background-size: 400% 400%;
+    animation: backgroundMove 10s ease infinite, fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.manrope {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

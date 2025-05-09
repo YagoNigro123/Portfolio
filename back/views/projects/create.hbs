@@ -1,0 +1,52 @@
+<div class="container mt-4">
+    <h1>Crear Nuevo Proyecto</h1>
+    
+    {{#if error_msg}}
+    <div class="alert alert-danger">
+        {{error_msg}}
+    </div>
+    {{/if}}
+
+    <form action="/project/create" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Título del Proyecto</label>
+            <input type="text" class="form-control" id="title" name="title" 
+                   value="{{formData.title}}" required>
+            <div class="form-text">Nombre que identificará a tu proyecto.</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea class="form-control" id="description" name="description" 
+                      rows="3" required>{{formData.description}}</textarea>
+            <div class="form-text">Explica en qué consiste el proyecto.</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="lenguages" class="form-label">Lenguajes Utilizados</label>
+            <input type="text" class="form-control" id="lenguages" name="lenguages" 
+                   value="{{formData.lenguages}}">
+            <div class="form-text">Ej: JavaScript, PHP, Python (separados por comas).</div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-label">Imagen</label>
+            
+            <input type="file" class="form-control" id="image" name="image" 
+                   accept="image/jpeg, image/png">
+            <div class="form-text">Formatos: JPG, PNG (Máx. 2MB).</div>
+            
+            {{#if formData.image}}
+            <div class="mt-2">
+                <p>Imagen actual:</p>
+                <img src="{{formData.image}}" style="max-width: 200px;" class="img-thumbnail">
+            </div>
+            {{/if}}
+        </div>
+        
+        <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary">Guardar Proyecto</button>
+            <a href="/project" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
