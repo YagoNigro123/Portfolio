@@ -13,7 +13,7 @@ router.use(isAuthenticated);
 router.post('/create', upload.single('image'), createProject);
 router.get('/', getAllProjects);
 router.get('/create', showCreateForm);
-router.post('/create', createProject);
+// router.post('/create', createProject);
 router.get('/edit/:id', showEditForm);
 router.post('/update/:id', updateProject);
 router.get('/delete/:id', deleteProject);

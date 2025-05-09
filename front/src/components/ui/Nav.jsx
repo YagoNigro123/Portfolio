@@ -7,12 +7,12 @@ const Nav = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const menuRef = useRef(null);
     
-    // Toggle para abrir/cerrar el menú móvil
+    
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
     
-    // Cerrar el menú cuando se hace clic fuera de él
+    
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -26,7 +26,7 @@ const Nav = () => {
         };
     }, []);
 
-    // Cerrar el menú si cambia la ruta (navegación)
+    
     useEffect(() => {
         setMobileMenuOpen(false);
     }, [location]);

@@ -52,7 +52,8 @@ export const getProject = async (req, res) => {
 
 export const createProject = async (req, res) => {
     try {
-        const { title, description, lenguages } = req.body;
+        const { title, content, lenguages } = req.body;
+        const image = req.file ? `/uploads/${req.file.filename}` : null;
 
         // Verifica campos obligatorios
         // if (!titulo || !descripcion) {
@@ -62,11 +63,9 @@ export const createProject = async (req, res) => {
         //     });
         // }
 
-        const image = req.file ? '/uploads/' + req.file.filename : null;
-
         await projectsModel.create({
             title: title,
-            content: description,
+            content: content,
             lenguages: lenguages,
             image: image
         });
@@ -102,9 +101,10 @@ export const showEditForm = async (req, res) => {
 export const updateProject = async (req, res) => {
     try {
         const projectId = req.params.id;
-        const { title, description, lenguages, image } = req.body;
+        const { title, content, lenguages } = req.body;
+        const image = req.file ? `/uploads/${req.file.filename}` : req.body.existingImage;
 
-        if (!title || !description) {
+        if (!title || !content) {
             return res.render('projects/edit', {
                 error_msg: 'El titulo y descripcion son obligatorios',
                 project: { ...req.body, id: projectId }
@@ -112,7 +112,7 @@ export const updateProject = async (req, res) => {
         }
         await projectsModel.update({
             title,
-            description,
+            content,
             lenguages,
             image
         }, {
@@ -153,20 +153,20 @@ export const apiGetProjects = async (req, res) => {
             attributes: [
                 'id',
                 'title',
-                'content', 
+                'content',
                 'lenguages',
                 'image',
                 'createdAt',
-                'updatedAt' 
+                'updatedAt'
             ],
             raw: true
         });
 
-        
+
         res.json({
             status: 'success',
             count: projects.length,
-            data: projects 
+            data: projects
         });
     } catch (error) {
         res.status(500).json({

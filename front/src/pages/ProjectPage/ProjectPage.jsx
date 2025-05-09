@@ -103,7 +103,7 @@ function Home() {
             try {
                 const response = await fetch('http://localhost:8000/api/projects');
                 
-                // Verifica si la respuesta es JSON
+                
                 const contentType = response.headers.get('content-type');
                 if (!contentType || !contentType.includes('application/json')) {
                     throw new Error('La respuesta no es JSON');
@@ -111,12 +111,11 @@ function Home() {
     
                 const result = await response.json();
                 
-                // Validación MEJORADA
+                
                 if (!result || result.status !== 'success') {
                     throw new Error(result.message || 'Error en la respuesta');
                 }
     
-                // Asegura que data es array (incluso si es null/undefined)
                 const projectsData = Array.isArray(result.data) ? result.data : [];
                 
                 setProjects(projectsData);
@@ -125,9 +124,9 @@ function Home() {
                 setError(error.message);
                 console.error('Error completo:', {
                     error,
-                    response: error.response // Si usas axios
+                    response: error.response 
                 });
-                setProjects([]); // Reset a array vacío
+                setProjects([]); 
             } finally {
                 setLoading(false);
             }
@@ -136,7 +135,7 @@ function Home() {
         fetchProjects();
     }, []);
 
-    // Renderizado condicional mejorado
+    
     if (loading) {
         return (
             <div className="loading">
@@ -174,7 +173,7 @@ function Home() {
                             <h2 className='h2'>{project.title}</h2>
                             <div className='proyectDivElementImg' href='#'>
                                 <img 
-                                    src={project.image || '/assets/projets/diseno-paginas-web.png'} 
+                                    src={`http://localhost:8000${project.image}` || '/assets/projets/diseno-paginas-web.png'} 
                                     alt={project.title} 
                                     onError={(e) => {
                                         e.target.src = '/assets/projets/diseno-paginas-web.png';

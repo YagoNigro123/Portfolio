@@ -30,11 +30,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Configuración de sesiones
 app.use(session({
-    secret: 'admin123', 
+    secret: 'admin123',
     resave: false,
     saveUninitialized: false,
     cookie: {
-        secure: false, 
+        secure: false,
         maxAge: 24 * 60 * 60 * 1000 // 1 día
     }
 }));
@@ -55,6 +55,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', apiProjectsRoutes);
 app.use('/', authRoutes);
 app.use('/project', projectRoutes);
+app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
 //Middleware para pasar datos de sesión a todas las vistas
 app.use((req, res, next) => {

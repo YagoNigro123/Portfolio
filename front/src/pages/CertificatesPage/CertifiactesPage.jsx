@@ -7,15 +7,15 @@ const CertificatesPages = () => {
     const certificates = [
         {
             id: 1,
-            image: "/assets/certificates/certificate1.jpg"
+            image: "/assets/certificates/diplo1.jpg"
         },
         {
             id: 2,
-            image: "/assets/certificates/certificate2.jpg"
+            image: "/assets/certificates/diplo2.jpg"
         },
         {
             id: 3,
-            image: "/assets/certificates/certificate3.jpg"
+            image: "/assets/certificates/diplo3.jpg"
         }
     ];
 
@@ -48,7 +48,7 @@ const CertificatesPages = () => {
                             alt={`Certificado ${certificates[currentIndex].title}`} 
                         />
                     </div>
-                    <div className="certificateInfo">
+                    {/* <div className="certificateInfo">
                         <div className="certificatesPagination">
                             {certificates.map((cert, index) => (
                                 <span 
@@ -58,7 +58,7 @@ const CertificatesPages = () => {
                                 ></span>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 
                 <div className="arrowContainer" onClick={nextCertificate}>
