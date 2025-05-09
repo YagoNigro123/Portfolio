@@ -62,7 +62,6 @@ export const createProject = async (req, res) => {
         //     });
         // }
 
-        // Ruta relativa de la imagen (si se subió)
         const image = req.file ? '/uploads/' + req.file.filename : null;
 
         await projectsModel.create({

@@ -14,7 +14,7 @@ body {
     font-family: 'Lugrasimo', cursive, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* O si quieres aplicarla a todos los elementos */
+
 * {
     font-family: 'Lugrasimo', cursive, sans-serif;
 }
