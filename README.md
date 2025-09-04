@@ -1,4 +1,4 @@
-# Yago Gabriel Nigro - Portfolio Web
+# Yago Nigro - Portfolio Web
 
 ![Portfolio Banner](ruta-a-tu-imagen.png)
 
