@@ -1,6 +1,7 @@
 # Yago Nigro - Portfolio Web
 
-![Portfolio Banner](public/assets/YagoNigro.png)
+![Portfolio Banner](<img width="1154" height="630" alt="Captura de pantalla 2025-09-04 134253" src="https://github.com/user-attachments/assets/353ec99d-5e69-46d6-94d1-c1b62b9760f0" />)
+
 
 Bienvenido a mi portfolio personal. Aquí encontrarás una selección de mis proyectos de desarrollo web, demostrando mis habilidades en **frontend** y **backend**, así como mi compromiso con el código limpio, escalable y buenas prácticas.
 
