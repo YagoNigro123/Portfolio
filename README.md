@@ -64,7 +64,7 @@ portfolio/
 ---
 
 ## Video del proyecto
-https://youtu.be/CoJ1xo-MklY
+![Demo](https://youtu.be/CoJ1xo-MklY)
 
 ## 📬 Contacto
 
