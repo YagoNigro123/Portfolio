@@ -1,6 +1,4 @@
 # Yago Nigro - Portfolio Web
-
-![Portfolio Banner]()
 <img width="1154" height="630" alt="Captura de pantalla 2025-09-04 134253" src="https://github.com/user-attachments/assets/ba8063be-c4f0-4188-b0d6-abf7375f534e" />
 
 
