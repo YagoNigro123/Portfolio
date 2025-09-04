@@ -2,7 +2,7 @@ import './ui.css';
 
 const Footer = () => {
     return (
-        <a href='../../../public/assets/Cv.docx' download className='footerBarButtonCvLink footerButton'>Descargar CV</a>
+        <a href='/assets/Yago_Nigro_CV.pdf' download className='footerBarButtonCvLink footerButton'>Descargar CV</a>
     );
 };
 

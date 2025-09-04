@@ -25,7 +25,7 @@ const Form = () =>{
                                 </li>
 
                                 <li className='contactDivFormUlLi'>
-                                    <a href="https://github.com/mortalboy680" 
+                                    <a href="https://github.com/YagoNigro123" 
                                     target="_blank" 
                                     rel="noopener noreferrer" 
                                     className="footerBarLinks">

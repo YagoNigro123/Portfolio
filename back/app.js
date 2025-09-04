@@ -1,8 +1,9 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import session from 'express-session';
 import db from './database/db.js';
-import dotenv from 'dotenv';
 import { engine } from 'express-handlebars';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -10,7 +11,7 @@ import projectRoutes from './routes/admin/project.routes.js';
 import authRoutes from './routes/auth.routes.js';
 import apiProjectsRoutes from './routes/api/projects.js';
 
-dotenv.config();
+
 
 const app = express();
 

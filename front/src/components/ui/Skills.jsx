@@ -1,6 +1,6 @@
 import './ui.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGit, faGithub, faHtml5, faCss3Alt, faJs, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faGit, faGithub, faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faGolang } from '@fortawesome/free-brands-svg-icons';
 
 const Skills = ()=>{
     return(
@@ -26,6 +26,9 @@ const Skills = ()=>{
                         </li>
                         <li className='bodySkillsUlLi'>
                             <FontAwesomeIcon icon={faNodeJs} className='bodySkillsUlLiIcons' color='#339933' />
+                        </li>
+                        <li className='bodySkillsUlLi'>
+                            <FontAwesomeIcon icon={faGolang} className='bodySkillsUlLiIcons' color='#85d8ffff' />
                         </li>
                     </ul>
             </div>

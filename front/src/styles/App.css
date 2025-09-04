@@ -19,7 +19,8 @@ body {
 
 
 * {
-    font-family: 'Lugrasimo', cursive, sans-serif;
+    /*font-family: 'Lugrasimo', cursive, sans-serif;*/
+    font-family: 'Inter', sans-serif;
 }
 
 .bodyBackground {
