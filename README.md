@@ -63,6 +63,9 @@ portfolio/
 
 ---
 
+## Video del proyecto
+https://youtu.be/CoJ1xo-MklY
+
 ## 📬 Contacto
 
 - **Email:** yago.gn007@gmail.com
