@@ -9,23 +9,10 @@ Bienvenido a mi portfolio personal. Aquí presento mis proyectos de desarrollo w
 ## 🌐 Tecnologías utilizadas
 
 - **Frontend:** React.js, HTML5, CSS3, JavaScript  
-- **Backend:** Go (Gin)  
-- **Base de datos:** (MySQL / PostgreSQL / MongoDB, según corresponda)  
-- **Autenticación:** JWT  
+- **Backend:** Node.js 
+- **Base de datos:** MySQL 
+- **Autenticación:**   
 - **Correo:** Envío de emails desde formularios de contacto  
-
----
-
-## 🚀 Proyectos destacados
-
-| Proyecto | Tecnologías | Descripción |
-|----------|------------|------------|
-| Starflux | React + Go | Página web de presentación de servicios de desarrollo web, con CRUD, formulario de contacto y autenticación JWT |
-| Otro Proyecto | React | Breve descripción del proyecto |
-
-> Podés agregar más proyectos según avances.
-
----
 
 ## 💻 Cómo usar este portfolio
 Clonar el repositorio:
