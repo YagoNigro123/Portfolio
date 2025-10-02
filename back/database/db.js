@@ -2,8 +2,8 @@ import { Sequelize } from "sequelize";
 
 const dbConfig = {
     database: process.env.DB_NAME || 'database_app',
-    username: process.env.DB_USER || 'root',
-    password: process.env.DB_PASS || '',
+    username: process.env.DB_USER || 'portfolio_user',
+    password: process.env.DB_PASS || 'power',
     host: process.env.DB_HOST || 'localhost',
     dialect: 'mysql',
     port: process.env.DB_PORT || 3306
