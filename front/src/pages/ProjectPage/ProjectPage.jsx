@@ -106,8 +106,8 @@ const hardcodedProjects = [
 
 function Home() {
     const [projects, setProjects] = useState([]);
-    const [loading, setLoading] = useState(false); // Cambiado a false
-    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(false); 
+    const [error] = useState(null);
 
     useEffect(() => {
         // Usar datos hardcodeados en lugar de fetch

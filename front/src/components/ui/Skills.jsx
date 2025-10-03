@@ -1,7 +1,7 @@
 import './ui.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGit, faGithub, faHtml5, faCss3Alt, faJs, faReact, faNodeJs, faGolang, faTypo3, faJsfiddle, faSquareJs } from '@fortawesome/free-brands-svg-icons';
-import { faTeletype } from '@fortawesome/free-solid-svg-icons';
+import { faHtml5, faCss3Alt, faReact, faNodeJs, faGolang, faSquareJs } from '@fortawesome/free-brands-svg-icons';
+// import { faTeletype } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = ()=>{
     return(
