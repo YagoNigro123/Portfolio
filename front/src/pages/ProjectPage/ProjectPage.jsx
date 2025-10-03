@@ -45,8 +45,8 @@ import {
     faMedium,
     faDribbble,
     faBehance
-  } from "@fortawesome/free-brands-svg-icons";
-  
+} from "@fortawesome/free-brands-svg-icons";
+
 const techIcons = {
     javascript: faJs,
     css3: faCss3Alt,
@@ -91,51 +91,58 @@ const techIcons = {
     medium: faMedium,
     dribbble: faDribbble,
     behance: faBehance
-  };
+};
+
+// Datos hardcodeados de proyectos
+const hardcodedProjects = [
+    {
+        id: 1,
+        title: "StarFlux",
+        image: "/assets/starflux.png",
+        content: "Una agencia de desarrollo web especializada en crear experiencias digitales que realmente impulsan negocios.",
+        lenguages: "react,javascript,tailwind,html5,css3,git,github,vite,eslint"
+    }
+];
 
 function Home() {
     const [projects, setProjects] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false); // Cambiado a false
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        // Usar datos hardcodeados en lugar de fetch
+        setProjects(hardcodedProjects);
+        setLoading(false);
+        
+        // Opcional: Si quieres mantener la lógica de fetch para desarrollo
+        // puedes comentar estas líneas y descomentar el fetch original
+        /*
         const fetchProjects = async () => {
             try {
                 const response = await fetch('http://localhost:8000/api/projects');
-                
-                
                 const contentType = response.headers.get('content-type');
                 if (!contentType || !contentType.includes('application/json')) {
                     throw new Error('La respuesta no es JSON');
                 }
-    
                 const result = await response.json();
-                
-                
                 if (!result || result.status !== 'success') {
                     throw new Error(result.message || 'Error en la respuesta');
                 }
-    
                 const projectsData = Array.isArray(result.data) ? result.data : [];
-                
                 setProjects(projectsData);
-                
             } catch (error) {
                 setError(error.message);
-                console.error('Error completo:', {
-                    error,
-                    response: error.response 
-                });
-                setProjects([]); 
+                console.error('Error completo:', error);
+                // En caso de error, usar datos hardcodeados como fallback
+                setProjects(hardcodedProjects);
             } finally {
                 setLoading(false);
             }
         };
-    
         fetchProjects();
+        */
     }, []);
 
-    
     if (loading) {
         return (
             <div className="loading">
@@ -157,9 +164,6 @@ function Home() {
         );
     }
 
-    if (loading) return <div className="loading">Cargando proyectos...</div>;
-    if (error) return <div className="error">Error: {error}</div>;
-
     return (
         <div className='body'>
             <div className='proyectDivBody'>
@@ -173,16 +177,16 @@ function Home() {
                             <h2 className='h2'>{project.title}</h2>
                             <div className='proyectDivElementImg' href='#'>
                                 <img 
-                                    src={`http://localhost:8000${project.image}` || '/assets/projets/diseno-paginas-web.png'} 
+                                    src={project.image || '/assets/projets/diseno-paginas-web.png'} 
                                     alt={project.title} 
                                     onError={(e) => {
                                         e.target.src = '/assets/projets/diseno-paginas-web.png';
                                     }}
                                 />
                                 <div className="proyectDivElementImgOverlay">
-                                <div className="proyectDivElementImgOverlayContent">
-                                    {project.content}
-                                </div>
+                                    <div className="proyectDivElementImgOverlayContent">
+                                        {project.content}
+                                    </div>
                                 </div>
                             </div>
                             <ul className="proyectDivElementUl">
@@ -198,6 +202,9 @@ function Home() {
                                     )
                                 ))}
                             </ul>
+                            <a href="https://starflux.pages.dev/" className='proyectDivElementUlLi link'>
+                                     link
+                            </a>
                         </div>
                     );
                 })}

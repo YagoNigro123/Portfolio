@@ -17,7 +17,7 @@ const Form = () =>{
                             <ul className='contactDivFormUl'>
 
                             <li className='contactDivFormUlLi'>
-                                    <a href="https://www.linkedin.com/feed/" 
+                                    <a href="https://www.linkedin.com/in/yagonigro/" 
                                     target="_blank" rel="noopener noreferrer" 
                                     className="footerBarLinks">
                                         <FontAwesomeIcon icon={faLinkedin} className="footerBarLinksIcon" />

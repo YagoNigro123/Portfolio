@@ -1,182 +1,318 @@
-.h2 {
-    font-weight: bold;
-    font-size: 2.5em;
-    color: #fff;
+/* Proyectos Section - Modern Glass Design */
+.projects-section {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
 }
 
-/*Proyectos*/
+.h2 {
+    font-weight: 800;
+    font-size: 3rem;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 4px 20px rgba(96, 165, 250, 0.3);
+}
+
 .proyectDivBody {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
-    padding: 0.25em;
-    overflow-y: auto;
-    width: 80%;
-    height: 100%;
-    margin: 2em auto;
-    border-radius: 1em;
-    background-color: transparent;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    overflow: visible; 
 }
 
+/* Tarjeta de Proyecto - Glass Effect */
 .proyectDivElement {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 80vh;
-    height: 60vh;
-    padding: 2vh;
-    margin: 2vh;
-    border-radius: 1em;
-    background: linear-gradient(to right, #0101DF, #2E2EFE, #5858FA, rgba(129, 159, 247, 0));
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: min(100%, 4500px);
+    min-height: 550px;
+    padding: 2rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
 
+.proyectDivElement::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(96, 165, 250, 0.6) 50%, 
+        transparent 100%);
+}
+
+.proyectDivElement:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 20px 40px rgba(96, 165, 250, 0.3),
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-color: rgba(96, 165, 250, 0.4);
+}
+
+/* Imagen del Proyecto */
 .proyectDivElementImg {
     position: relative;
-    height: auto;
-    width: 95%;
+    width: 100%;
+    height: 250px;
+    border-radius: 16px;
     overflow: hidden;
-    border-radius: 1em;
+    margin-bottom: 1.5rem;
 }
 
 .proyectDivElementImg img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
-    transition: all 0.4s ease;
-    border-radius: 1em;
+    transition: all 0.5s ease;
+    border-radius: 16px;
 }
 
-.proyectDivElementUl {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    flex-direction: row;
-    margin: 1vh;
-}
-
-.proyectDivElementUlLi {
-    margin: 0.2em;
-    padding: 0.3em;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0.25em;
-    transition: background-color 0.3s ease, transform 0.3s ease, border-radius 0.3s ease;
-}
-
-.proyectDivElementUlLi:hover {
-    background-color: rgb(146, 146, 146);
-    border-radius: 0.25em;
-    transform: scale(1.25);
-}
-
-.proyectDivElementUlLiIcon {
-    font-size: 2.5em;
-}
-
+/* Overlay mejorado */
 .proyectDivElementImgOverlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(135deg, 
+        rgba(96, 165, 250, 0.9) 0%, 
+        rgba(167, 139, 250, 0.9) 100%);
     backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.4s ease;
-    padding: 1em;
-    box-sizing: border-box;
-    border-radius: 1em;
+    transition: all 0.4s ease;
+    padding: 2rem;
+    border-radius: 16px;
 }
 
 .proyectDivElementImgOverlayContent {
     color: white;
-    user-select: none;
     text-align: center;
-    font-size: 0.9em;
-    line-height: 1.5;
-    max-height: 90%;
-    overflow: auto;
-    padding: 1em;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .proyectDivElementImg:hover img {
-    transform: scale(1.05);
-    filter: brightness(0.4) blur(2px);
+    transform: scale(1.08);
 }
 
 .proyectDivElementImg:hover .proyectDivElementImgOverlay {
     opacity: 1;
 }
 
-@media (max-width: 495px) {
-    .h2 {
-        font-size: 1.4em;
-    }
-
-    .proyectDivElement {
-        height: fit-content;
-        width: 100%;
-    }
-
-    .proyectDivElementUl {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-
+.proyectDivElementUl {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 0.75rem;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
 }
 
-@media (max-width: 740px) {
-    .proyectDivElement {
-        width: 60vh;
-        height: 50vh;
-    }
+.proyectDivElementUlLi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 5em;
+}
+.link::after {
+    content: '↗';
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
 
-    .experienceDivBody {
-        width: 20em;
-    }
+.proyectDivElementUlLi:hover {
+    background: rgba(96, 165, 250, 0.2);
+    border-color: rgba(96, 165, 250, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+}
 
-    .proyectDivElementUl {
-        list-style: none;
-        display: flex;
-        padding: 0;
-        margin: 0;
-        gap: 0.4em;
-        flex-direction: row;
-        margin: 1vh;
-    }
+.proyectDivElementUlLiIcon {
+    font-size: 1.75rem;
+    color: #e2e8f0;
+    transition: color 0.3s ease;
+}
 
-    .proyectDivElementUlLi {
-        margin: 0;
-    }
+.proyectDivElementUlLi:hover .proyectDivElementUlLiIcon {
+    color: #60a5fa;
+}
 
-    .proyectDivElementUlLiIcon {
-        flex-wrap: wrap;
-        font-size: 1em;
-    }
+/* Contenido del proyecto */
+.proyect-content {
+    color: #e2e8f0;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
 
-
+.proyect-title {
+    color: #f8fafc;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 ::-webkit-scrollbar {
-    width: 1em;
-    border-radius: 1em 1em 1em 1em;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f0f0f0;
-    border-radius: 1em 1em 1em 1em;
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #A9BCF5;
-    border-radius: 1em 1em 1em 1em;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #003d75;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .proyectDivBody {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 1rem 0.5rem;
+    }
+
+    .h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .proyectDivElement {
+        width: 95%;
+        min-height: 500px;
+        padding: 1.5rem;
+    }
+
+    .proyectDivElementImg {
+        height: 200px;
+    }
+
+    .proyectDivElementUl {
+        grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .proyectDivElementUlLiIcon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .h2 {
+        font-size: 2rem;
+    }
+
+    .proyectDivElement {
+        padding: 1rem;
+        min-height: 450px;
+    }
+
+    .proyectDivElementImg {
+        height: 180px;
+    }
+
+    .proyectDivElementUl {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .proyectDivElementUlLi {
+        padding: 0.5rem;
+    }
+
+    .proyectDivElementUlLiIcon {
+        font-size: 1.25rem;
+    }
+
+    .proyect-content {
+        font-size: 1rem;
+    }
+}
+
+/* Clase para ocultar scroll cuando hay solo un proyecto */
+.proyectDivBody.no-scroll {
+    overflow: visible;
+    height: auto;
+}
+
+/* Asegurar que ocupe toda la pantalla en PC */
+@media (min-width: 1024px) {
+    .projects-section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .proyectDivBody.single-project {
+        height: auto;
+        min-height: 60vh;
+        align-items: center;
+    }
 }

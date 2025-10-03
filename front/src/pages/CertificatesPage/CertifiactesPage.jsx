@@ -30,14 +30,14 @@ const CertificatesPage = () => {
     return (
         <div className="certificatesContainer">
             <div className="body flex">
-                <button
+                {/* <button
                     className="arrowContainer"
                     onClick={prevCertificate}
                     aria-label="Anterior certificado"
                     disabled={certificates.length <= 1}
                 >
                     <FontAwesomeIcon icon={faChevronLeft} className='arrowIcon' />
-                </button>
+                </button> */}
 
                 <div className="certificatesDivElement">
                     <div className="certificatesDivElementImg">
@@ -48,14 +48,14 @@ const CertificatesPage = () => {
                     </div>
                 </div>
 
-                <button
+                {/* <button
                     className="arrowContainer"
                     onClick={nextCertificate}
                     aria-label="Siguiente certificado"
                     disabled={certificates.length <= 1}
                 >
                     <FontAwesomeIcon icon={faChevronRight} className='arrowIcon' />
-                </button>
+                </button> */}
             </div>
         </div>
     );

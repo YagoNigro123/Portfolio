@@ -5,14 +5,19 @@
     overflow-y: auto;
     height: auto;
     width: auto;
-    background-color: azure;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 1em;
     margin: 2em;
+    box-shadow: 0 10px 40px rgba(1, 1, 223, 0.2);
+    border: 1px solid rgba(46, 46, 254, 0.1);
 }
 
 h2 {
     font-size: 2em;
     margin-bottom: 1em;
+    color: #0101DF;
+    font-weight: 700;
+    text-align: center;
 }
 
 .contactFrom {
@@ -20,6 +25,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    width: 100%;
 }
 
 .contactDivForm {
@@ -27,6 +33,7 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .contacDivFormContact {
@@ -42,10 +49,16 @@ h2 {
     margin: 2em;
 }
 
-
 .footerBarLinksIcon {
     height: 3em;
     width: 3em;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1);
+}
+
+.footerBarLinksIcon:hover {
+    transform: translateY(-3px) scale(1.05);
+    filter: brightness(1.2) drop-shadow(0 4px 8px rgba(46, 46, 254, 0.3));
 }
 
 .contactDivFormImg {
@@ -55,16 +68,38 @@ h2 {
     object-fit: cover;
     overflow: hidden;
     margin-bottom: 1em;
+    border: 3px solid #5858FA;
+    box-shadow: 0 5px 15px rgba(88, 88, 250, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactDivFormImg:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(46, 46, 254, 0.4);
 }
 
 .input {
     border-radius: 1em;
     margin: 0.25em;
     text-align: center;
-    border: none;
     padding: 0.5em;
-    border: black solid 1px;
+    border: 2px solid #819FF7;
     width: 35vh;
+    background: #ffffff;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    color: #0101DF;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #2E2EFE;
+    box-shadow: 0 0 0 3px rgba(46, 46, 254, 0.1);
+    transform: translateY(-2px);
+}
+
+.input::placeholder {
+    color: #819FF7;
 }
 
 .textarea {
@@ -73,25 +108,51 @@ h2 {
     height: 18vh;
     resize: none;
     text-align: center;
-    border: none;
-    border: black solid 1px;
+    border: 2px solid #819FF7;
     padding-top: 1em;
     margin: 0.25em;
+    background: #ffffff;
+    font-size: 1em;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    color: #0101DF;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #2E2EFE;
+    box-shadow: 0 0 0 3px rgba(46, 46, 254, 0.1);
+    transform: translateY(-2px);
+}
+
+.textarea::placeholder {
+    color: #819FF7;
 }
 
 .buttom {
     border-radius: 1em;
     border: none;
-    color: rgb(0, 0, 0);
+    color: #ffffff;
     width: 16vh;
     padding: 1em;
     margin-top: 1em;
-    background-color: #A9BCF5;
-    transition: background-color 0.3s ease-in-out;
+    background: linear-gradient(135deg, #2E2EFE 0%, #5858FA 100%);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 46, 254, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .buttom:hover {
-    background-color: #2E2EFE;
+    background: linear-gradient(135deg, #0101DF 0%, #2E2EFE 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(1, 1, 223, 0.4);
+}
+
+.buttom:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 10px rgba(46, 46, 254, 0.3);
 }
 
 @media (max-width: 745px) {

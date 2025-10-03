@@ -1,6 +1,8 @@
 /* General styles */
 p {
     width: 40%;
+    line-height: 1.6;
+    color: #fff;
 }
 
 .body {
@@ -11,8 +13,6 @@ p {
 }
 
 /* Skills Section */
-
-
 .bodySkills {
     margin: 1em;
 }
@@ -22,44 +22,54 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     list-style: none;
-    gap: 1em;
-    background-color: #A9BCF5;
+    gap: 1.2em;
+    background: linear-gradient(135deg, #5858FA 0%, #819FF7 100%);
     border-radius: 1em;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 1em 1.5em;
+    box-shadow: 0 8px 25px rgba(46, 46, 254, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .bodySkillsUlLi {
-    padding: 0.5em;
+    padding: 0.8em;
+    transition: all 0.3s ease;
+    border-radius: 1em;
 }
 
 .bodySkillsUlLi:hover {
-    background-color: #c1cffa;
-    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 .bodySkillsUlLiIcons {
     font-size: 3em;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-/* .bodySkillsUlLiIcons {} */
+.bodySkillsUlLi:hover .bodySkillsUlLiIcons {
+    transform: scale(1.1) rotate(5deg);
+}
 
 /* Typing Animation */
 .name {
     overflow: hidden;
     white-space: nowrap;
-    color: #000;
+    color: #fff;
     width: 0;
-    border-right: 3px solid white;
+    border-right: 3px solid #5858FA;
     animation: typing 2s steps(30, end) forwards, blink 0.75s step-end infinite;
     line-height: 1.5;
     font-size: 5em;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes typing {
     from {
         width: 0;
     }
-
     to {
         width: 100%;
     }
@@ -69,9 +79,8 @@ p {
     50% {
         border-color: transparent;
     }
-
     100% {
-        border-color: white;
+        border-color: #5858FA;
     }
 }
 
@@ -80,22 +89,33 @@ p {
 .age {
     color: #fff;
     font-size: 2em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Button Styles */
 .buttomProyects {
-    padding: 0.75em;
-    background-color: transparent;
+    padding: 0.75em 1.5em;
+    background: linear-gradient(135deg, #2E2EFE 0%, #5858FA 100%);
+    border: none;
     border-radius: 1em;
     margin: 1em;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(46, 46, 254, 0.4);
     user-select: none;
     font-size: 1.1em;
     font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .buttomProyects:hover {
-    background-color: #A9BCF5;
+    background: linear-gradient(135deg, #0101DF 0%, #2E2EFE 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(1, 1, 223, 0.5);
+}
+
+.buttomProyects:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(46, 46, 254, 0.4);
 }
 
 .linkButtom {
@@ -103,19 +123,30 @@ p {
     color: #fff;
 }
 
-/*footer */
+/* Footer */
 .footerButton {
-    border: .15em solid #fff;
-    padding: 1.5vh 2vh 1.5vh 2vh;
+    border: 2px solid #5858FA;
+    padding: 1.5vh 2vh;
     font-size: 1.1em;
     border-radius: 1em;
     margin: 1em;
+    background: rgba(88, 88, 250, 0.1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.footerButton:hover {
+    background: linear-gradient(135deg, #2E2EFE 0%, #5858FA 100%);
+    border-color: #2E2EFE;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(46, 46, 254, 0.4);
 }
 
 .footerBarButtonCvLink {
     text-decoration: none;
     color: #fff;
     cursor: pointer;
+    font-weight: 600;
 }
 
 /* Responsive Design */
@@ -137,12 +168,17 @@ p {
     .bodySkillsUlLiIcons {
         width: 5vh;
         height: 5vh;
+        font-size: 5vh;
     }
 
     .bodySkillsBackground {
         height: 3.5em;
     }
 
+    .buttomProyects {
+        font-size: 1em;
+        padding: 0.6em 1.2em;
+    }
 }
 
 @media (max-width: 430px) {
@@ -160,11 +196,9 @@ p {
 
     .bodySkillsUl {
         margin: 0;
-        padding: 0;
-        padding: 0;
-        gap: 0;
+        padding: 0.5em;
+        gap: 0.5em;
     }
-
 
     .age {
         font-size: 2vh;
@@ -173,5 +207,22 @@ p {
     .bodySkillsUlLiIcons {
         width: 4vh;
         height: 4vh;
+        font-size: 4vh;
+    }
+
+    .buttomProyects {
+        font-size: 0.9em;
+        padding: 0.5em 1em;
+        margin: 0.5em;
+    }
+
+    .footerButton {
+        padding: 1vh 1.5vh;
+        font-size: 1em;
+        margin: 0.5em;
+    }
+
+    p {
+        width: 80%;
     }
 }

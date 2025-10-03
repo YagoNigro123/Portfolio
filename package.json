@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "<img width=\"1154\" height=\"630\" alt=\"Captura de pantalla 2025-09-04 134253\" src=\"https://github.com/user-attachments/assets/ba8063be-c4f0-4188-b0d6-abf7375f534e\" />",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'Compilando proyecto...'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YagoNigro123/Portfolio.git"
+  },
+  "author": "Yago Nigro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YagoNigro123/Portfolio/issues"
+  },
+  "homepage": "https://github.com/YagoNigro123/Portfolio#readme"
+}
